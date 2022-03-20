@@ -1,0 +1,11 @@
+{% autoescape off %}
+
+Welcome to Django Video Conference App Login
+
+Hello {{ name }} !!
+
+Click on below link to confirm your account.
+
+Confirmation Link: https://{{ domain }}{% url 'activate' uidb64=uid token=token %}
+
+{% endautoescape %}

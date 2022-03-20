@@ -1,0 +1,37 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+{% if user.is_authenticated %}
+<main>
+    <section id="room-name-wrapper">
+        <h2>Room Name -  <span id="room-name"></span></h2>
+    </section>
+
+    <section id="video-streams"></section>
+
+    <section id="controls-wrapper">
+        <div class="icon-wrapper">
+            <img class="control-icon" id="mic-btn" src="{% static 'images/microphone.svg' %}" alt="audio"/>
+        </div>
+
+        <div class="icon-wrapper">
+            <img class="control-icon" id="camera-btn" src="{% static 'images/video.svg' %}" alt="camera"/>
+        </div>
+
+        <div class="icon-wrapper">
+            <img class="control-icon" id="sharescreen-btn" src="{% static 'images/share-screen.png' %}" alt="screen share"/>
+        </div>
+        <div class="icon-wrapper">
+            <img class="control-icon" id="leave-btn" src="{% static 'images/endcall.png' %}" alt="Leave call"/>
+        </div>
+    </section>
+</main>
+{% else %}
+    <h1 style="text-align: center; color:red">Please Login !</h1>
+    <h3 style="text-align: center;"><a style="text-align: center;" href="/signin" class="signup-image-link">Sign in</a></h3>
+{% endif %}
+
+<script type="text/javascript"  src="{% static 'assets/AgoraRTC_N-4.9.4.js' %}"></script> <!--Agora web sdk-->
+<script type="text/javascript" src="{% static 'js/stream.js' %}" ></script>
+{% endblock content %}
