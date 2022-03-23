@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-zzrc!g8lh9&by4vq9@r56+gii)7n2=$r$qx2rcwibet&c#!+4o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG =False
 
-ALLOWED_HOSTS = ['127.0.0.1','letsconnectvideoapp.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','https://letsconnectvideoapp.herokuapp.com/']
 
 
 # Application definition
